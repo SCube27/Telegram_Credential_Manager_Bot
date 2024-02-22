@@ -8,8 +8,13 @@ const bot = new Telegraf(process.env.BOT_TOKEN); // Created a new bot object
 bot.start((ctx) => ctx.reply('Welcome, I\'m Sahil\'s Manager')); // Starting the bot
 
 try {
-    bot.command('secret', (ctx) => ctx.reply('Nihal is a Puppie!'));
-    bot.command('creds', async (ctx) => {
+    bot.command('add', async (ctx) => { // Add command -> adds the credentials
+        // To be included
+    });
+    bot.command('del', async (ctx) => { // Delete command -> deletes the credentials
+        // To be included
+    });
+    bot.command('creds', async (ctx) => { // Show command -> shows the credentials
         try {
             const data = await file_reader();
             let response = 'These are the saved credentials for now:\n';
